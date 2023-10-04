@@ -13,6 +13,7 @@
 		BE5675B02ACDC90A00ACB14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5675AE2ACDC90A00ACB14C /* Main.storyboard */; };
 		BE5675B22ACDC90C00ACB14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5675B12ACDC90C00ACB14C /* Assets.xcassets */; };
 		BE5675B52ACDC90C00ACB14C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5675B32ACDC90C00ACB14C /* LaunchScreen.storyboard */; };
+		BEF3F27E2ACDDB6B0000D982 /* ConjugationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF3F27D2ACDDB6B0000D982 /* ConjugationPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BE5675B12ACDC90C00ACB14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE5675B42ACDC90C00ACB14C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE5675B62ACDC90C00ACB14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF3F27D2ACDDB6B0000D982 /* ConjugationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugationPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BE5675A82ACDC90A00ACB14C /* AppDelegate.swift */,
 				BE5675AA2ACDC90A00ACB14C /* SceneDelegate.swift */,
 				BE5675AC2ACDC90A00ACB14C /* ViewController.swift */,
+				BEF3F27D2ACDDB6B0000D982 /* ConjugationPage.swift */,
 				BE5675AE2ACDC90A00ACB14C /* Main.storyboard */,
 				BE5675B12ACDC90C00ACB14C /* Assets.xcassets */,
 				BE5675B32ACDC90C00ACB14C /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				BE5675AD2ACDC90A00ACB14C /* ViewController.swift in Sources */,
 				BE5675A92ACDC90A00ACB14C /* AppDelegate.swift in Sources */,
+				BEF3F27E2ACDDB6B0000D982 /* ConjugationPage.swift in Sources */,
 				BE5675AB2ACDC90A00ACB14C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
