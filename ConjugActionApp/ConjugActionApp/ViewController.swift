@@ -14,23 +14,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnVerbConjugationUIButton.layer.cornerRadius = 25
+        btnConjuguerUIButton.layer.cornerRadius = 25
         
         
         
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func btnVerbConjugationTouchUpInside(_ sender: Any) {
-        
-        
-        
+    @IBAction func btnConjuguerTouchUpInside(_ sender: Any) {
     }
     
+   
+   
     
-    @IBOutlet weak var btnVerbConjugationUIButton: UIButton!
+    @IBOutlet weak var btnConjuguerUIButton: UIButton!
     
-
+    
 }
-
