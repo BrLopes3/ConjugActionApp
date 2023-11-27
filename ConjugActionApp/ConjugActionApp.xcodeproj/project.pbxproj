@@ -19,6 +19,8 @@
 		BE768D892B0E3CB6005C8CCE /* enumSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE768D882B0E3CB6005C8CCE /* enumSegue.swift */; };
 		BE768D8D2B0E4AFD005C8CCE /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE768D8C2B0E4AFD005C8CCE /* SignUpPageViewController.swift */; };
 		BE768D912B0E7978005C8CCE /* ConjugationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE768D902B0E7978005C8CCE /* ConjugationPageViewController.swift */; };
+		BE79ABF62B14419C00F30E53 /* VerbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79ABF52B14419C00F30E53 /* VerbModel.swift */; };
+		BE79ABF82B1441AD00F30E53 /* verbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79ABF72B1441AD00F30E53 /* verbProvider.swift */; };
 		BE8CBD552AD98835008E590F /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8CBD542AD98835008E590F /* LogInPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		BE768D882B0E3CB6005C8CCE /* enumSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enumSegue.swift; sourceTree = "<group>"; };
 		BE768D8C2B0E4AFD005C8CCE /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
 		BE768D902B0E7978005C8CCE /* ConjugationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugationPageViewController.swift; sourceTree = "<group>"; };
+		BE79ABF52B14419C00F30E53 /* VerbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbModel.swift; sourceTree = "<group>"; };
+		BE79ABF72B1441AD00F30E53 /* verbProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verbProvider.swift; sourceTree = "<group>"; };
 		BE8CBD542AD98835008E590F /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				BE768D822B0E3A69005C8CCE /* UserModel.swift */,
+				BE79ABF52B14419C00F30E53 /* VerbModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				BE55BD9B2B02708400948E4F /* UserProvider.swift */,
+				BE79ABF72B1441AD00F30E53 /* verbProvider.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,8 +213,10 @@
 				BE5675AD2ACDC90A00ACB14C /* ViewController.swift in Sources */,
 				BE5675A92ACDC90A00ACB14C /* AppDelegate.swift in Sources */,
 				BE5675AB2ACDC90A00ACB14C /* SceneDelegate.swift in Sources */,
+				BE79ABF62B14419C00F30E53 /* VerbModel.swift in Sources */,
 				BE768D8D2B0E4AFD005C8CCE /* SignUpPageViewController.swift in Sources */,
 				BE768D912B0E7978005C8CCE /* ConjugationPageViewController.swift in Sources */,
+				BE79ABF82B1441AD00F30E53 /* verbProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
