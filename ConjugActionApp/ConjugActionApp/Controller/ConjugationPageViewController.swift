@@ -37,7 +37,7 @@ class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "conjugationCell", for: indexPath)
         
-        var verbContent = VerbProvider.toString()
+        let verbContent = VerbProvider.toString()
         
         
         var content = cell.defaultContentConfiguration()
