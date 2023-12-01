@@ -34,6 +34,9 @@ class LogInPageViewController: UIViewController {
         if username != nil && password != nil{
             txtUsername.text = username
             txtPassword.text = password
+        }else{
+            txtUsername.text = "bruno"
+            txtPassword.text = "1234"
         }
         txtPassword.isSecureTextEntry = true
         btnLoginUIButton.layer.cornerRadius = 25

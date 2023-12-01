@@ -32,13 +32,20 @@ class ViewController: UIViewController {
         if segue.identifier == Segue.toConjugationPage{
             
             (segue.destination as! ConjugationPageViewController).verb = txtInputVerb.text
-       
+            if txtInputVerb.text == "aller"{
+                (segue.destination as! ConjugationPageViewController).tableVerb = VerbProvider.aller
+            }else if txtInputVerb.text == "parler"{
+                (segue.destination as! ConjugationPageViewController).tableVerb = VerbProvider.parler
+            }else{
+                Toast.ok(view: self, title: "Verb not found", message: "Try another verb")
+            }
         }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if identifier == Segue.toConjugationPage{
+            
             return true
         }
         return false
