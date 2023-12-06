@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     private func initialize(){
         
         btnConjuguerUIButton.layer.cornerRadius = 25
+        btnConjuguerUIButton.layer.shadowColor = UIColor.gray.cgColor
+        btnConjuguerUIButton.layer.shadowOpacity = 0.8
+        btnConjuguerUIButton.layer.shadowOffset = .init(width: 5, height: 5)
         lblGreetings.text = "Bonjour " + username!
     }
     

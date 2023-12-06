@@ -22,17 +22,17 @@ class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblVerb.text = verb
+        lblVerb.text = verb?.capitalized
         
         
         tableView.register(UINib(nibName: SecondTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: SecondTableViewCell.identifier)
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.backgroundColor = .init(red:254/255, green: 246/255, blue: 234/255, alpha:1)
         
         let tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 50))
-        tableHeaderView.backgroundColor = .systemBlue
+        tableHeaderView.backgroundColor = .init(red: 126/256, green: 178/255, blue: 232/255, alpha: 1)
            
            // Create a UILabel for the header text
            let headerLabel = UILabel(frame: CGRect(x: 16, y: 0, width: tableHeaderView.bounds.width - 32, height: tableHeaderView.bounds.height))
@@ -48,9 +48,6 @@ class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITa
            tableView.tableHeaderView = tableHeaderView
         
         
-        
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +56,7 @@ class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 3 //will continue the same????
     }
     
     
@@ -67,8 +64,10 @@ class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: SecondTableViewCell.identifier, for: indexPath) as! SecondTableViewCell
         print(VerbProvider.toString(inputVerb: tableVerb)[0])
-       
         
+        cell.backgroundColor = .init(red: 249/255, green: 231/255, blue: 210/255, alpha: 1)
+        
+        //this will change when we use the API
         if indexPath.section == 0{
             cell.lblTableViewCell?.text = VerbProvider.toString(inputVerb: tableVerb)[0]
             
@@ -99,6 +98,7 @@ class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITa
         
         let button = UIButton(type: .system)
         
+        // update that for the other verb tenses
         if section == 0{
             button.setTitle("Present", for: .normal)
         }else if section == 1{
@@ -125,6 +125,7 @@ class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITa
         
     }
     
+    //change that for the other verb tenses
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Indicatif"
     }

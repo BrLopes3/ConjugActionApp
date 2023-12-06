@@ -39,7 +39,15 @@ class LogInPageViewController: UIViewController {
             txtPassword.text = "1234"
         }
         txtPassword.isSecureTextEntry = true
+        
+        btnLoginUIButton.layer.shadowColor = UIColor.gray.cgColor
+        btnLoginUIButton.layer.shadowOpacity = 0.8
+        btnLoginUIButton.layer.shadowOffset = .init(width:5, height:5)
         btnLoginUIButton.layer.cornerRadius = 25
+        
+        btnSignUpUIButton.layer.shadowColor = UIColor.gray.cgColor
+        btnSignUpUIButton.layer.shadowOpacity = 0.8
+        btnSignUpUIButton.layer.shadowOffset = .init(width:5, height:5)
         btnSignUpUIButton.layer.cornerRadius = 25
     }
     
@@ -50,6 +58,7 @@ class LogInPageViewController: UIViewController {
             let username = txtUsername.text!.lowercased()
             let password = txtPassword.text!
             
+            // change that to do the verification with the API
             let verifyCredentials = UserProvider.verifyCredentials(userInput: username, passwordInput: password)
             
             if verifyCredentials{
