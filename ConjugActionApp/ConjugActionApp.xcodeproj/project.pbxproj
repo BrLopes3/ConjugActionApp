@@ -36,6 +36,7 @@
 		BEB73FB92B20BDF90025FBD1 /* FrenchVerbImperatifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB73FAF2B20BDF90025FBD1 /* FrenchVerbImperatifModel.swift */; };
 		BEB73FBA2B20BDF90025FBD1 /* FrenchVerbIndicatifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB73FB02B20BDF90025FBD1 /* FrenchVerbIndicatifModel.swift */; };
 		BEB73FBB2B20BDF90025FBD1 /* FrenchVerbSubjonctifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB73FB12B20BDF90025FBD1 /* FrenchVerbSubjonctifModel.swift */; };
+		BEB73FBE2B20CE110025FBD1 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB73FBD2B20CE110025FBD1 /* Context.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		BEB73FAF2B20BDF90025FBD1 /* FrenchVerbImperatifModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchVerbImperatifModel.swift; sourceTree = "<group>"; };
 		BEB73FB02B20BDF90025FBD1 /* FrenchVerbIndicatifModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchVerbIndicatifModel.swift; sourceTree = "<group>"; };
 		BEB73FB12B20BDF90025FBD1 /* FrenchVerbSubjonctifModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchVerbSubjonctifModel.swift; sourceTree = "<group>"; };
+		BEB73FBD2B20CE110025FBD1 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		BE5675A72ACDC90A00ACB14C /* ConjugActionApp */ = {
 			isa = PBXGroup;
 			children = (
+				BEB73FBC2B20CDD60025FBD1 /* Shared */,
 				BEB73FA92B20BDF90025FBD1 /* Model */,
 				BEB73FA42B20BDF90025FBD1 /* Service */,
 				BE55BD972B026FEC00948E4F /* Controller */,
@@ -208,6 +211,14 @@
 			);
 			name = Model;
 			path = ../../../../../Downloads/FrenchVerbAPI/Model;
+			sourceTree = "<group>";
+		};
+		BEB73FBC2B20CDD60025FBD1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BEB73FBD2B20CE110025FBD1 /* Context.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 				BEB73FB32B20BDF90025FBD1 /* API.swift in Sources */,
 				BEB73FB52B20BDF90025FBD1 /* FrenchVerbParticipeModel.swift in Sources */,
 				BE79ABF82B1441AD00F30E53 /* verbProvider.swift in Sources */,
+				BEB73FBE2B20CE110025FBD1 /* Context.swift in Sources */,
 				BEB73FBA2B20BDF90025FBD1 /* FrenchVerbIndicatifModel.swift in Sources */,
 				BEB73FB62B20BDF90025FBD1 /* FrenchVerbConditionnelModel.swift in Sources */,
 			);

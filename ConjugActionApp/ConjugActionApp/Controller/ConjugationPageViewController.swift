@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ConjugationPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
     
     var sectionToExpand: Int?
     var verb : String?
     var tableVerb: [Verb] = []
+    
+    var verbChecked: FrenchVerbIndicatif?
+    
     
     
     @IBOutlet weak var tableView: UITableView!

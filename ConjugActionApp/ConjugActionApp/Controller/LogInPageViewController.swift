@@ -8,16 +8,18 @@
 import UIKit
 
 class LogInPageViewController: UIViewController {
-
-    var username: String?
-    var password: String?
     
-    @IBOutlet weak var txtUsername: UITextField!
+    var email: String?
+    var password: String?
+    var name: String?
+    
+    
+    @IBOutlet weak var txtEmail: UITextField!
     
     @IBOutlet weak var txtPassword: UITextField!
     
     @IBOutlet weak var btnLoginUIButton: UIButton!
-   
+    
     @IBOutlet weak var btnSignUpUIButton: UIButton!
     
     @IBOutlet weak var btnRevealPassword: UIButton!
@@ -31,15 +33,15 @@ class LogInPageViewController: UIViewController {
     
     private func initialize(){
         
-        if username != nil && password != nil{
-            txtUsername.text = username
-            txtPassword.text = password
-        }else{
-            txtUsername.text = "bruno"
-            txtPassword.text = "1234"
-        }
+//        if email != nil && password != nil{
+//            txtEmail.text = email
+//            txtPassword.text = password
+//        }else{
+//            txtEmail.text = ""
+//            txtPassword.text = ""
+//        }
         txtPassword.isSecureTextEntry = true
-        
+        //style configuration
         btnLoginUIButton.layer.shadowColor = UIColor.gray.cgColor
         btnLoginUIButton.layer.shadowOpacity = 0.8
         btnLoginUIButton.layer.shadowOffset = .init(width:5, height:5)
@@ -51,32 +53,71 @@ class LogInPageViewController: UIViewController {
         btnSignUpUIButton.layer.cornerRadius = 25
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        
+//        if identifier == Segue.toViewController{
+//            
+//            let username = txtUsername.text!.lowercased()
+//            let password = txtPassword.text!
+//            
+//            // change that to do the verification with the API
+//            //  let verifyCredentials = UserProvider.verifyCredentials(userInput: username, passwordInput: password)
+//            FrenchVerbAPI.signIn(email: username, password: password) { token in
+//                
+//                Context.loggedUserToken = token
+//                
+//
+//            } failHandler: { httpStatusCode, errorMessage in
+//                
+//                Toast.ok(view: self, title: "Wrong Credentials", message: errorMessage)
+//            }
+//        
+//        
+//        }
+//        else if identifier == Segue.toSignupPage{
+//            return true
+//        }else {
+//            return false
+//        }
+//        return false
+//    }
+    
+    
+    @IBAction func btnLoginTouchUpInside(_ sender: Any) {
         
-        if identifier == Segue.toViewController{
+        let email = txtEmail.text!.lowercased()
+        let password = txtPassword.text!
+        
+        FrenchVerbAPI.signIn(email: email, password: password) { token in
             
-            let username = txtUsername.text!.lowercased()
-            let password = txtPassword.text!
+            Context.loggedUserToken = token
             
-            // change that to do the verification with the API
-            let verifyCredentials = UserProvider.verifyCredentials(userInput: username, passwordInput: password)
+            print("logged with token: \(token)" )
             
-            if verifyCredentials{
-                
-                return !txtUsername.text!.isEmpty
-            }else{
-                Toast.ok(view: self, title: "Wrong Credentials", message: "Username or password are wrong")
+            
+            DispatchQueue.main.async{
+                self.performSegue(withIdentifier: Segue.toViewController, sender: self)
             }
-        }else if identifier == Segue.toSignupPage{
-            return true
+            
+            
+        } failHandler: { httpStatusCode, errorMessage in
+            DispatchQueue.main.async{
+                Toast.ok(view: self, title: "An error ocurred", message: errorMessage)
+            }
         }
-        return false
+
+        
     }
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == Segue.toViewController{
-            (segue.destination as! ViewController).username = self.txtUsername.text!.capitalized
+            (segue.destination as! ViewController).username =
+            
+            self.txtEmail.text!.capitalized
         }
         
     }
